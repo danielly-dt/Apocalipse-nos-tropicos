@@ -1,0 +1,29 @@
+@use '../variables' as v;
+
+.gallery { background: v.$panel; }
+
+.gallery__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: v.$radius;
+  box-shadow: v.$shadow;
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .15s ease;
+}
+
+.gallery__item img:hover { transform: translateY(-2px); }
+
+@media (max-width: 1024px) {
+  .gallery__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery__item img { height: 180px; }
+}

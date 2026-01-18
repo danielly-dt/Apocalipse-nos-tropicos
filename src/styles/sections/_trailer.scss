@@ -1,0 +1,19 @@
+@use '../variables' as v;
+
+.trailer { background: v.$bg; }
+
+.trailer__video {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: v.$radius;
+  overflow: hidden;
+  box-shadow: v.$shadow;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.trailer__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

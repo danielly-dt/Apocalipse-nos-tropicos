@@ -1,0 +1,40 @@
+@use '../variables' as v;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(0,0,0,.40);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.header__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1rem 5.6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header__brand {
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header__links {
+  display: flex;
+  gap: .7rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .header__container { align-items: flex-start; flex-direction: column; }
+  .header__links { justify-content: flex-start; }
+}

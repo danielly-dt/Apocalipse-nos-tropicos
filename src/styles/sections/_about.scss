@@ -1,0 +1,13 @@
+@use '../variables' as v;
+
+.about {
+  background: v.$panel;
+}
+
+.about__context {
+  margin-top: 1.6rem;
+  padding: 1.2rem;
+  border-radius: v.$radius;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+}

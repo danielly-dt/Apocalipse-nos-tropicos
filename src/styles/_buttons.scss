@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  padding: .85rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 800;
+
+  background: v.$accent;
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,.10);
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+.button:hover { transform: translateY(-1px); opacity: .95; }
+
+.button--secondary {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.28);
+}
+
+.button--dark {
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.14);
+}

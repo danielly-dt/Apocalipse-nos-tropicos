@@ -1,0 +1,29 @@
+@use '../variables' as v;
+
+.faq { background: v.$bg; }
+
+.faq__questions__item {
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  padding: 1rem 0;
+}
+
+.faq__questions__item__question {
+  cursor: pointer;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq__questions__item__question::after {
+  content: "+";
+  opacity: .8;
+}
+
+.faq__questions__item__answer {
+  display: none;
+  margin-top: .65rem;
+}
+
+.faq__questions__item--is-open .faq__questions__item__answer { display: block; }
+.faq__questions__item--is-open .faq__questions__item__question::after { content: "–"; }
